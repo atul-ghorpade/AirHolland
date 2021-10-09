@@ -10,6 +10,12 @@
 		B7A5E3C92711A7E600E62A8E /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3C82711A7E600E62A8E /* EventEntity.swift */; };
 		B7A5E3CF2711B5B300E62A8E /* DateHelper in Frameworks */ = {isa = PBXBuildFile; productRef = B7A5E3CE2711B5B300E62A8E /* DateHelper */; };
 		B7A5E3D22711B62C00E62A8E /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B7A5E3D12711B62C00E62A8E /* Moya */; };
+		B7A5E3D62711CE2600E62A8E /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3D52711CE0F00E62A8E /* AppDIContainer.swift */; };
+		B7A5E3D82711CE5900E62A8E /* EventsSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3D72711CE5900E62A8E /* EventsSceneDIContainer.swift */; };
+		B7A5E3DB2711D02700E62A8E /* Altertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3DA2711D02700E62A8E /* Altertable.swift */; };
+		B7A5E3DD2711D0BF00E62A8E /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3DC2711D0BF00E62A8E /* StoryboardInstantiable.swift */; };
+		B7A5E3DF2711DD1F00E62A8E /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3DE2711DD1F00E62A8E /* AppFlowCoordinator.swift */; };
+		B7A5E3E22711DFAC00E62A8E /* EventsListFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3E12711DFAC00E62A8E /* EventsListFlowCoordinator.swift */; };
 		CA9A43FA270C1BDA005B52AC /* GetEventsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A43F9270C1BDA005B52AC /* GetEventsUseCase.swift */; };
 		CA9A43FD270C1C26005B52AC /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A43FC270C1C26005B52AC /* EventModel.swift */; };
 		CA9A43FF270C1D03005B52AC /* UseCaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A43FE270C1D03005B52AC /* UseCaseError.swift */; };
@@ -24,7 +30,7 @@
 		CAAB5A96270B41B200E2F1CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAAB5A95270B41B200E2F1CB /* Assets.xcassets */; };
 		CAAB5A99270B41B200E2F1CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAB5A97270B41B200E2F1CB /* LaunchScreen.storyboard */; };
 		CAAB5AA4270B430D00E2F1CB /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB5AA3270B430D00E2F1CB /* EventsListViewController.swift */; };
-		CAAB5AA6270B431E00E2F1CB /* EventsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAB5AA5270B431E00E2F1CB /* EventsList.storyboard */; };
+		CAAB5AA6270B431E00E2F1CB /* EventsListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAB5AA5270B431E00E2F1CB /* EventsListViewController.storyboard */; };
 		CAAB5AA9270B435D00E2F1CB /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB5AA8270B435D00E2F1CB /* EventCell.swift */; };
 		CAAB5AAC270B43B000E2F1CB /* EventItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB5AAB270B43B000E2F1CB /* EventItemViewModel.swift */; };
 		CAAB5AAE270B43C100E2F1CB /* EventsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB5AAD270B43C100E2F1CB /* EventsListViewModel.swift */; };
@@ -33,6 +39,12 @@
 
 /* Begin PBXFileReference section */
 		B7A5E3C82711A7E600E62A8E /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
+		B7A5E3D52711CE0F00E62A8E /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		B7A5E3D72711CE5900E62A8E /* EventsSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSceneDIContainer.swift; sourceTree = "<group>"; };
+		B7A5E3DA2711D02700E62A8E /* Altertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Altertable.swift; sourceTree = "<group>"; };
+		B7A5E3DC2711D0BF00E62A8E /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		B7A5E3DE2711DD1F00E62A8E /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		B7A5E3E12711DFAC00E62A8E /* EventsListFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListFlowCoordinator.swift; sourceTree = "<group>"; };
 		CA9A43F9270C1BDA005B52AC /* GetEventsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventsUseCase.swift; sourceTree = "<group>"; };
 		CA9A43FC270C1C26005B52AC /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		CA9A43FE270C1D03005B52AC /* UseCaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseError.swift; sourceTree = "<group>"; };
@@ -49,7 +61,7 @@
 		CAAB5A98270B41B200E2F1CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAAB5A9A270B41B200E2F1CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAAB5AA3270B430D00E2F1CB /* EventsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
-		CAAB5AA5270B431E00E2F1CB /* EventsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventsList.storyboard; sourceTree = "<group>"; };
+		CAAB5AA5270B431E00E2F1CB /* EventsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventsListViewController.storyboard; sourceTree = "<group>"; };
 		CAAB5AA8270B435D00E2F1CB /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		CAAB5AAB270B43B000E2F1CB /* EventItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItemViewModel.swift; sourceTree = "<group>"; };
 		CAAB5AAD270B43C100E2F1CB /* EventsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewModel.swift; sourceTree = "<group>"; };
@@ -75,6 +87,41 @@
 				B7A5E3C82711A7E600E62A8E /* EventEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		B7A5E3D32711CDE000E62A8E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5E3D42711CDEA00E62A8E /* DIContainer */,
+				B7A5E3DE2711DD1F00E62A8E /* AppFlowCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B7A5E3D42711CDEA00E62A8E /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5E3D52711CE0F00E62A8E /* AppDIContainer.swift */,
+				B7A5E3D72711CE5900E62A8E /* EventsSceneDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		B7A5E3D92711D01A00E62A8E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5E3DA2711D02700E62A8E /* Altertable.swift */,
+				B7A5E3DC2711D0BF00E62A8E /* StoryboardInstantiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B7A5E3E02711DF9500E62A8E /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5E3E12711DFAC00E62A8E /* EventsListFlowCoordinator.swift */,
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 		CA9A43FB270C1C15005B52AC /* Models */ = {
@@ -147,6 +194,7 @@
 		CAAB5A8B270B41AE00E2F1CB /* AirHolland */ = {
 			isa = PBXGroup;
 			children = (
+				B7A5E3D32711CDE000E62A8E /* Application */,
 				CA9A4400270C1D87005B52AC /* Data */,
 				CAAB5AB2270C1AC000E2F1CB /* Domain */,
 				CAAB5AA0270B421300E2F1CB /* Presentation */,
@@ -173,6 +221,7 @@
 		CAAB5AA1270B421F00E2F1CB /* EventsList */ = {
 			isa = PBXGroup;
 			children = (
+				B7A5E3E02711DF9500E62A8E /* Flows */,
 				CAAB5AAA270B438500E2F1CB /* ViewModel */,
 				CAAB5AA2270B42D100E2F1CB /* View */,
 			);
@@ -184,7 +233,7 @@
 			children = (
 				CAAB5AA7270B433400E2F1CB /* Cell */,
 				CAAB5AA3270B430D00E2F1CB /* EventsListViewController.swift */,
-				CAAB5AA5270B431E00E2F1CB /* EventsList.storyboard */,
+				CAAB5AA5270B431E00E2F1CB /* EventsListViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +258,7 @@
 		CAAB5AAF270C182400E2F1CB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B7A5E3D92711D01A00E62A8E /* Protocols */,
 				CAAB5AB0270C183500E2F1CB /* Observable.swift */,
 			);
 			path = Utils;
@@ -300,7 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAAB5A99270B41B200E2F1CB /* LaunchScreen.storyboard in Resources */,
-				CAAB5AA6270B431E00E2F1CB /* EventsList.storyboard in Resources */,
+				CAAB5AA6270B431E00E2F1CB /* EventsListViewController.storyboard in Resources */,
 				CAAB5A96270B41B200E2F1CB /* Assets.xcassets in Resources */,
 				CAAB5A94270B41AE00E2F1CB /* Main.storyboard in Resources */,
 			);
@@ -314,16 +364,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA9A43FA270C1BDA005B52AC /* GetEventsUseCase.swift in Sources */,
+				B7A5E3E22711DFAC00E62A8E /* EventsListFlowCoordinator.swift in Sources */,
 				CAAB5AB1270C183500E2F1CB /* Observable.swift in Sources */,
+				B7A5E3DD2711D0BF00E62A8E /* StoryboardInstantiable.swift in Sources */,
+				B7A5E3D82711CE5900E62A8E /* EventsSceneDIContainer.swift in Sources */,
 				CAAB5AAC270B43B000E2F1CB /* EventItemViewModel.swift in Sources */,
 				CA9A440B270C1EA8005B52AC /* EventsProviderProtocol.swift in Sources */,
 				CA9A440D270C1FC0005B52AC /* MoyaHelper.swift in Sources */,
 				CAAB5A91270B41AE00E2F1CB /* ViewController.swift in Sources */,
 				CAAB5AA4270B430D00E2F1CB /* EventsListViewController.swift in Sources */,
 				CAAB5AA9270B435D00E2F1CB /* EventCell.swift in Sources */,
+				B7A5E3DF2711DD1F00E62A8E /* AppFlowCoordinator.swift in Sources */,
+				B7A5E3DB2711D02700E62A8E /* Altertable.swift in Sources */,
 				CAAB5A8D270B41AE00E2F1CB /* AppDelegate.swift in Sources */,
 				CAAB5AAE270B43C100E2F1CB /* EventsListViewModel.swift in Sources */,
 				CA9A4406270C1DFE005B52AC /* EventsService.swift in Sources */,
+				B7A5E3D62711CE2600E62A8E /* AppDIContainer.swift in Sources */,
 				B7A5E3C92711A7E600E62A8E /* EventEntity.swift in Sources */,
 				CA9A43FD270C1C26005B52AC /* EventModel.swift in Sources */,
 				CAAB5A8F270B41AE00E2F1CB /* SceneDelegate.swift in Sources */,

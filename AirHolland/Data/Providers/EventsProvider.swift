@@ -1,6 +1,6 @@
 import Foundation
 
-class EventsProvider: EventsProviderProtocol {
+class DefaultEventsProvider: EventsProviderProtocol {
     private let provider: Provider<EventsService>
 
     convenience init() {

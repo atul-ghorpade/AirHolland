@@ -9,8 +9,8 @@ struct EventModel: Equatable {
     let tail: String?
     let departure: String?
     let destination: String?
-    let departTime: Date?
-    let arriveTime: Date?
+    let departTime: String?
+    let arriveTime: String?
     let dutyId: String?
     let dutyCode: DutyCode?
     let captain: String?

@@ -1,10 +1,3 @@
-//
-//  EventEntity.swift
-//  AirHolland
-//
-//  Created by Atul Ghorpade on 09/10/21.
-//
-
 import DateHelper
 import Foundation
 
@@ -41,7 +34,7 @@ struct EventEntity: Decodable {
     
     func toDomain() throws -> EventModel {
         let flightName = flightName.isEmpty ? nil : flightName
-        guard let date = Date(fromString: dateString, format: .isoDate) else {
+        guard let date = Date(fromString: dateString, format: .custom("dd/MM/yyyy")) else {
             let error = EncodingError.Context(codingPath: [EventEntity.CodingKeys.dateString],
                                               debugDescription: "invalid date")
             throw EncodingError.invalidValue(self, error)
@@ -50,8 +43,8 @@ struct EventEntity: Decodable {
         let tail = tail.isEmpty ? nil : tail
         let departure = departure.isEmpty ? nil : departure
         let destination = destination.isEmpty ? nil : destination
-        let departTime = Date(fromString: departTime, format: .isoDateTime)
-        let arriveTime = Date(fromString: arriveTime, format: .isoDateTime)
+        let departTime = departTime.isEmpty ? nil : departTime
+        let arriveTime = arriveTime.isEmpty ? nil : arriveTime
         let dutyId = dutyId.isEmpty ? nil : dutyId
         let dutyCode = dutyCode.isEmpty ? nil : DutyCode(rawValue: dutyCode)
         let captain = captain.isEmpty ? nil : captain

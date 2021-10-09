@@ -8,11 +8,11 @@ struct GetEventsParams {
     }
 }
 
-protocol GetEventsUseCaseProtocol {
+protocol GetEventsUseCase {
     func run(_ params: GetEventsParams)
 }
 
-final class GetEventsUseCase: GetEventsUseCaseProtocol {
+final class DefaultGetEventsUseCase: GetEventsUseCase {
     private let provider: EventsProviderProtocol!
 
     init(provider: EventsProviderProtocol) {
