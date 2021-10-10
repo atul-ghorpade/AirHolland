@@ -1,7 +1,6 @@
 //
 
 import Foundation
-import UIKit
 
 struct EventItemViewModel: Equatable {
     let imageName: String?

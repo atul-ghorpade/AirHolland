@@ -33,13 +33,35 @@ final class EventsListViewController: UIViewController, StoryboardInstantiable, 
     }
 }
 
-extension EventsListViewController: UITableViewDataSource {
+extension EventsListViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        viewModel.items.value.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
+        headerView.backgroundColor = .systemGroupedBackground
+
+        let titleLabel = UILabel(frame: CGRect(x: 10, y: 7, width: view.frame.size.width, height: 36))
+        titleLabel.text = viewModel.items.value[section].title
+        titleLabel.textColor = .black
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        headerView.addSubview(titleLabel)
+
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.items.value.count
+        let sectionViewModel = viewModel.items.value[section]
+        return sectionViewModel.rows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +71,9 @@ extension EventsListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
 
-        cell.fill(with: viewModel.items.value[indexPath.row])
+        let sectionViewModel = viewModel.items.value[indexPath.section]
+        let rowViewModel = sectionViewModel.rows[indexPath.row]
+        cell.fill(with: rowViewModel)
         return cell
     }
 }
