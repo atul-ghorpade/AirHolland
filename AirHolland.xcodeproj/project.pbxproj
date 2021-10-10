@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B77D3BD62712DA020010F2CA /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B77D3BD52712DA020010F2CA /* FontAwesome.ttf */; };
 		B7A5E3C92711A7E600E62A8E /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3C82711A7E600E62A8E /* EventEntity.swift */; };
 		B7A5E3CF2711B5B300E62A8E /* DateHelper in Frameworks */ = {isa = PBXBuildFile; productRef = B7A5E3CE2711B5B300E62A8E /* DateHelper */; };
 		B7A5E3D22711B62C00E62A8E /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B7A5E3D12711B62C00E62A8E /* Moya */; };
@@ -16,6 +17,7 @@
 		B7A5E3DD2711D0BF00E62A8E /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3DC2711D0BF00E62A8E /* StoryboardInstantiable.swift */; };
 		B7A5E3DF2711DD1F00E62A8E /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3DE2711DD1F00E62A8E /* AppFlowCoordinator.swift */; };
 		B7A5E3E22711DFAC00E62A8E /* EventsListFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3E12711DFAC00E62A8E /* EventsListFlowCoordinator.swift */; };
+		B7A5E3E52711F6A200E62A8E /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7A5E3E42711F6A100E62A8E /* EventCell.xib */; };
 		CA9A43FA270C1BDA005B52AC /* GetEventsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A43F9270C1BDA005B52AC /* GetEventsUseCase.swift */; };
 		CA9A43FD270C1C26005B52AC /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A43FC270C1C26005B52AC /* EventModel.swift */; };
 		CA9A43FF270C1D03005B52AC /* UseCaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A43FE270C1D03005B52AC /* UseCaseError.swift */; };
@@ -38,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B77D3BD52712DA020010F2CA /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		B7A5E3C82711A7E600E62A8E /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
 		B7A5E3D52711CE0F00E62A8E /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		B7A5E3D72711CE5900E62A8E /* EventsSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSceneDIContainer.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		B7A5E3DC2711D0BF00E62A8E /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		B7A5E3DE2711DD1F00E62A8E /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		B7A5E3E12711DFAC00E62A8E /* EventsListFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListFlowCoordinator.swift; sourceTree = "<group>"; };
+		B7A5E3E42711F6A100E62A8E /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		CA9A43F9270C1BDA005B52AC /* GetEventsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventsUseCase.swift; sourceTree = "<group>"; };
 		CA9A43FC270C1C26005B52AC /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		CA9A43FE270C1D03005B52AC /* UseCaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseError.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 				CAAB5AA0270B421300E2F1CB /* Presentation */,
 				CAAB5A8C270B41AE00E2F1CB /* AppDelegate.swift */,
 				CAAB5A8E270B41AE00E2F1CB /* SceneDelegate.swift */,
+				B77D3BD52712DA020010F2CA /* FontAwesome.ttf */,
 				CAAB5A90270B41AE00E2F1CB /* ViewController.swift */,
 				CAAB5A92270B41AE00E2F1CB /* Main.storyboard */,
 				CAAB5A95270B41B200E2F1CB /* Assets.xcassets */,
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				CAAB5AA8270B435D00E2F1CB /* EventCell.swift */,
+				B7A5E3E42711F6A100E62A8E /* EventCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -352,7 +358,9 @@
 				CAAB5A99270B41B200E2F1CB /* LaunchScreen.storyboard in Resources */,
 				CAAB5AA6270B431E00E2F1CB /* EventsListViewController.storyboard in Resources */,
 				CAAB5A96270B41B200E2F1CB /* Assets.xcassets in Resources */,
+				B7A5E3E52711F6A200E62A8E /* EventCell.xib in Resources */,
 				CAAB5A94270B41AE00E2F1CB /* Main.storyboard in Resources */,
+				B77D3BD62712DA020010F2CA /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

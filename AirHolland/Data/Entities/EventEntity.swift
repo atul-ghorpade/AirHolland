@@ -46,7 +46,7 @@ struct EventEntity: Decodable {
         let departTime = departTime.isEmpty ? nil : departTime
         let arriveTime = arriveTime.isEmpty ? nil : arriveTime
         let dutyId = dutyId.isEmpty ? nil : dutyId
-        let dutyCode = dutyCode.isEmpty ? nil : DutyCode(rawValue: dutyCode)
+        let dutyCode = DutyCode(rawValue: dutyCode) ?? .off
         let captain = captain.isEmpty ? nil : captain
         let firstOfficer = firstOfficer.isEmpty ? nil : firstOfficer
         let flightAttendant = flightAttendant.isEmpty ? nil : flightAttendant

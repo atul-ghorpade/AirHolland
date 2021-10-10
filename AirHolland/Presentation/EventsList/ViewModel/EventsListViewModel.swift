@@ -11,7 +11,7 @@ protocol EventsListViewModelInput {
 }
 
 protocol EventsListViewModelOutput {
-    var items: Observable<[EventItemViewModel]>? { get }
+    var items: Observable<[EventItemViewModel]> { get }
     var screenTitle: String { get }
 }
 
@@ -21,6 +21,9 @@ final class DefaultEventsListViewModel: EventsListViewModel {
     private let getEventsUseCase: GetEventsUseCase
     private let actions: EventsListViewModelActions
     
+    var items: Observable<[EventItemViewModel]> = Observable([])
+    var screenTitle: String = ""
+
     init(eventsListUseCase: GetEventsUseCase,
          actions: EventsListViewModelActions) {
         self.getEventsUseCase = eventsListUseCase
@@ -31,14 +34,12 @@ final class DefaultEventsListViewModel: EventsListViewModel {
         getEventsUseCase.run(GetEventsParams() { [weak self] result in
             switch result {
             case let .success(eventModels):
-                break
+                self?.items.value = eventModels.map {
+                    EventItemViewModel($0)
+                }
             case .failure:
                 break
             }
         })
     }
-    
-    var items: Observable<[EventItemViewModel]>?
-    
-    var screenTitle: String = ""
 }

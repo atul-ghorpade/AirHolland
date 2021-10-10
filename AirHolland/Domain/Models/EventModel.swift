@@ -12,7 +12,7 @@ struct EventModel: Equatable {
     let departTime: String?
     let arriveTime: String?
     let dutyId: String?
-    let dutyCode: DutyCode?
+    let dutyCode: DutyCode
     let captain: String?
     let firstOfficer: String?
     let flightAttendant: String?
@@ -23,4 +23,5 @@ enum DutyCode: String, Decodable {
     case flight = "FLIGHT"
     case off = "OFF"
     case positioning = "POSITIONING"
+    case layover = "LAYOVER"
 }
