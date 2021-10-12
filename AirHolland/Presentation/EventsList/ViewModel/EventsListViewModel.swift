@@ -8,7 +8,8 @@ struct EventsListViewModelActions {
 
 protocol EventsListViewModelInput {
     func viewLoaded()
-    func listRefreshRequested()
+    func listRefreshPulled()
+    func selectedRow(section: Int, row: Int)
 }
 
 protocol EventsListViewModelOutput {
@@ -23,9 +24,10 @@ final class DefaultEventsListViewModel: EventsListViewModel {
     private let getEventsUseCase: GetEventsUseCase
     private let actions: EventsListViewModelActions
     
+    var eventGroupedModels = [Int: [EventModel]]()
     var items: Observable<[EventsSectionViewModel]> = Observable([])
     var error: Observable<String> = Observable("")
-    var screenTitle: String = ""
+    var screenTitle: String = "Events"
 
     init(eventsListUseCase: GetEventsUseCase,
          actions: EventsListViewModelActions) {
@@ -39,13 +41,20 @@ final class DefaultEventsListViewModel: EventsListViewModel {
         })
     }
     
-    func listRefreshRequested() {
+    func listRefreshPulled() {
         getEventsUseCase.run(GetEventsParams(shouldRefreshExplicitly: true) { [weak self] result in
             self?.handleEventsListResponse(result: result)
         })
     }
     
-    func handleEventsListResponse(result: Result<[EventModel], UseCaseError>) {
+    func selectedRow(section: Int, row: Int) {
+        guard let selectedEventModel = eventGroupedModels[section]?[row] else {
+            return
+        }
+        actions.showEventDetails(selectedEventModel)
+    }
+    
+    private func handleEventsListResponse(result: Result<[EventModel], UseCaseError>) {
         switch result {
         case let .success(eventModels):
             items.value = createSectionsViewModels(events: eventModels)
@@ -65,7 +74,8 @@ final class DefaultEventsListViewModel: EventsListViewModel {
             $0.date
         }
         let uniqueDatesArray = datesArray.uniqued()
-        return uniqueDatesArray.map { uniqueDate in
+        eventGroupedModels.removeAll()
+        return uniqueDatesArray.enumerated().map { (index, uniqueDate) in
             let eventsArrayWithDate = sortedEvents.filter {
                 $0.date == uniqueDate
             }
@@ -73,6 +83,7 @@ final class DefaultEventsListViewModel: EventsListViewModel {
             let eventItemViewModels = eventsArrayWithDate.map {
                 EventItemViewModel($0)
             }
+            eventGroupedModels[index] = eventsArrayWithDate
 
             return EventsSectionViewModel(title: sectionTitleString,
                                                               rows: eventItemViewModels)

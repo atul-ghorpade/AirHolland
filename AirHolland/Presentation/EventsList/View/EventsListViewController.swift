@@ -22,6 +22,7 @@ final class EventsListViewController: UIViewController, StoryboardInstantiable, 
     }
     
     private func setupViews() {
+        title = viewModel.screenTitle
         tableView.register(UINib(nibName: EventCell.identifier, bundle: nil), forCellReuseIdentifier: EventCell.identifier)
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableView.automaticDimension
@@ -45,7 +46,7 @@ final class EventsListViewController: UIViewController, StoryboardInstantiable, 
     }
     
     @objc private func refresh(_ sender: AnyObject) {
-        viewModel.listRefreshRequested()
+        viewModel.listRefreshPulled()
     }
 }
 
@@ -91,5 +92,10 @@ extension EventsListViewController: UITableViewDataSource, UITableViewDelegate {
         let rowViewModel = sectionViewModel.rows[indexPath.row]
         cell.fill(with: rowViewModel)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.selectedRow(section: indexPath.section,
+                              row: indexPath.row)
     }
 }

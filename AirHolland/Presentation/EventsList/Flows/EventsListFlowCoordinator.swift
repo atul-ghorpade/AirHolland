@@ -2,6 +2,7 @@ import UIKit
 
 protocol EventsListFlowCoordinatorDependencies {
     func buildEventsListViewController(actions: EventsListViewModelActions) -> EventsListViewController
+    func buildEventDetailsViewController(eventModel: EventModel) -> EventDetailsViewController
 }
 
 final class EventsListFlowCoordinator {
@@ -24,6 +25,7 @@ final class EventsListFlowCoordinator {
     }
     
     private func showEventDetails(eventModel: EventModel) {
-        // TODO: navigate to details
+        let vc = dependencies.buildEventDetailsViewController(eventModel: eventModel)
+        navigationController?.pushViewController(vc, animated: false)
     }
 }

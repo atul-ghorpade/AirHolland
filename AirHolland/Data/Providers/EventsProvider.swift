@@ -27,7 +27,10 @@ class DefaultEventsProvider: EventsProviderProtocol {
                 let eventsListModels = try events.map {
                     try $0.toDomain()
                 }
-                print("number of events from Data storage - \(eventsListModels.count)")
+                print("Number of records received from local data storage - \(eventsListModels.count)")
+                if eventsListModels.isEmpty {
+                    break
+                }
                 return completion(.success(eventsListModels))
             } catch {
                 print("mapping error - " + error.localizedDescription)
@@ -49,7 +52,7 @@ class DefaultEventsProvider: EventsProviderProtocol {
                     let eventsListModels = try eventsListEntities.map {
                         try $0.toDomain()
                     }
-                    print("number of events from API - \(eventsListModels.count)")
+                    print("Number of records received from service API - \(eventsListModels.count)")
                     self.repository.saveEvents(events: eventsListEntities)
                     completion(.success(eventsListModels))
                 } catch {

@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 final class EventsDIContainer {
+    // MARK: - Events List
     func buildEventsListViewController(actions: EventsListViewModelActions) -> EventsListViewController {
         return EventsListViewController.create(with: buildEventsListViewModel(actions: actions))
     }
@@ -17,6 +18,15 @@ final class EventsDIContainer {
     
     func buildEventsListProvider() -> EventsProviderProtocol {
         return DefaultEventsProvider()
+    }
+    
+    // MARK: - Events Details
+    func buildEventDetailsViewController(eventModel: EventModel) -> EventDetailsViewController {
+        return EventDetailsViewController.create(with: buildEventDetailsViewModel(event: eventModel))
+    }
+    
+    func buildEventDetailsViewModel(event: EventModel) -> EventDetailsViewModel {
+        return DefaultEventDetailsViewModel(event: event)
     }
     
     // MARK: - Flow Coordinators

@@ -30,6 +30,7 @@ final class DefaultEventsRepositoy: EventsRepository {
     }
     
     func saveEvents(events: [EventEntity]) {
+        // TODO: add it on background queue - performBackgroundFetch or privateConcurrencyQueue
         let context = CoreDataStorage.shared.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ManagedEvent")
         // Delete existing
