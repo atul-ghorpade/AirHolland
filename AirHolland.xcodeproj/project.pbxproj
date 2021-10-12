@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		B77D3BD62712DA020010F2CA /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B77D3BD52712DA020010F2CA /* FontAwesome.ttf */; };
 		B77D3BDE2712F5690010F2CA /* EventsSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77D3BDD2712F5690010F2CA /* EventsSectionViewModel.swift */; };
+		B77D3BF42715C9620010F2CA /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77D3BF32715C9620010F2CA /* CoreDataStorage.swift */; };
+		B77D3BF72715C9960010F2CA /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B77D3BF52715C9960010F2CA /* CoreDataStorage.xcdatamodeld */; };
+		B77D3BF92715CADA0010F2CA /* EventsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77D3BF82715CAD90010F2CA /* EventsRepository.swift */; };
+		B77D3BFB2715CD450010F2CA /* ManagedEvent+toEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77D3BFA2715CD450010F2CA /* ManagedEvent+toEntity.swift */; };
 		B7A5E3C92711A7E600E62A8E /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3C82711A7E600E62A8E /* EventEntity.swift */; };
 		B7A5E3CF2711B5B300E62A8E /* DateHelper in Frameworks */ = {isa = PBXBuildFile; productRef = B7A5E3CE2711B5B300E62A8E /* DateHelper */; };
 		B7A5E3D22711B62C00E62A8E /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B7A5E3D12711B62C00E62A8E /* Moya */; };
@@ -43,6 +47,10 @@
 /* Begin PBXFileReference section */
 		B77D3BD52712DA020010F2CA /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		B77D3BDD2712F5690010F2CA /* EventsSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSectionViewModel.swift; sourceTree = "<group>"; };
+		B77D3BF32715C9620010F2CA /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		B77D3BF62715C9960010F2CA /* CoreDataStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataStorage.xcdatamodel; sourceTree = "<group>"; };
+		B77D3BF82715CAD90010F2CA /* EventsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRepository.swift; sourceTree = "<group>"; };
+		B77D3BFA2715CD450010F2CA /* ManagedEvent+toEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedEvent+toEntity.swift"; sourceTree = "<group>"; };
 		B7A5E3C82711A7E600E62A8E /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
 		B7A5E3D52711CE0F00E62A8E /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		B7A5E3D72711CE5900E62A8E /* EventsSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSceneDIContainer.swift; sourceTree = "<group>"; };
@@ -87,6 +95,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B77D3BF22715C9350010F2CA /* PersistenStorage */ = {
+			isa = PBXGroup;
+			children = (
+				B77D3BF32715C9620010F2CA /* CoreDataStorage.swift */,
+				B77D3BF52715C9960010F2CA /* CoreDataStorage.xcdatamodeld */,
+				B77D3BF82715CAD90010F2CA /* EventsRepository.swift */,
+				B77D3BFA2715CD450010F2CA /* ManagedEvent+toEntity.swift */,
+			);
+			path = PersistenStorage;
+			sourceTree = "<group>";
+		};
 		B7A5E3C72711A7CD00E62A8E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +160,7 @@
 		CA9A4400270C1D87005B52AC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B77D3BF22715C9350010F2CA /* PersistenStorage */,
 				B7A5E3C72711A7CD00E62A8E /* Entities */,
 				CA9A4404270C1DC7005B52AC /* Services */,
 				CA9A4401270C1D99005B52AC /* Providers */,
@@ -374,11 +394,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77D3BF42715C9620010F2CA /* CoreDataStorage.swift in Sources */,
 				CA9A43FA270C1BDA005B52AC /* GetEventsUseCase.swift in Sources */,
 				B7A5E3E22711DFAC00E62A8E /* EventsListFlowCoordinator.swift in Sources */,
 				CAAB5AB1270C183500E2F1CB /* Observable.swift in Sources */,
 				B7A5E3DD2711D0BF00E62A8E /* StoryboardInstantiable.swift in Sources */,
 				B7A5E3D82711CE5900E62A8E /* EventsSceneDIContainer.swift in Sources */,
+				B77D3BFB2715CD450010F2CA /* ManagedEvent+toEntity.swift in Sources */,
+				B77D3BF92715CADA0010F2CA /* EventsRepository.swift in Sources */,
 				CAAB5AAC270B43B000E2F1CB /* EventItemViewModel.swift in Sources */,
 				B77D3BDE2712F5690010F2CA /* EventsSectionViewModel.swift in Sources */,
 				CA9A440B270C1EA8005B52AC /* EventsProviderProtocol.swift in Sources */,
@@ -390,6 +413,7 @@
 				B7A5E3DB2711D02700E62A8E /* Altertable.swift in Sources */,
 				CAAB5A8D270B41AE00E2F1CB /* AppDelegate.swift in Sources */,
 				CAAB5AAE270B43C100E2F1CB /* EventsListViewModel.swift in Sources */,
+				B77D3BF72715C9960010F2CA /* CoreDataStorage.xcdatamodeld in Sources */,
 				CA9A4406270C1DFE005B52AC /* EventsService.swift in Sources */,
 				B7A5E3D62711CE2600E62A8E /* AppDIContainer.swift in Sources */,
 				B7A5E3C92711A7E600E62A8E /* EventEntity.swift in Sources */,
@@ -646,6 +670,19 @@
 			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B77D3BF52715C9960010F2CA /* CoreDataStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B77D3BF62715C9960010F2CA /* CoreDataStorage.xcdatamodel */,
+			);
+			currentVersion = B77D3BF62715C9960010F2CA /* CoreDataStorage.xcdatamodel */;
+			path = CoreDataStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CAAB5A81270B41AE00E2F1CB /* Project object */;
 }

@@ -2,6 +2,8 @@ import Foundation
 
 class DefaultEventsProvider: EventsProviderProtocol {
     private let provider: Provider<EventsService>
+    // TODO: Inject repository from outside
+    private let repository = DefaultEventsRepositoy()
 
     convenience init() {
         self.init(provider: Provider<EventsService>())
@@ -12,6 +14,23 @@ class DefaultEventsProvider: EventsProviderProtocol {
     }
 
     func getEvents(completion: @escaping EventsListCompletion) {
+        // Fetch from repository - the local storage
+        repository.fetchEvents { result in
+            switch result {
+            case let .success(events):
+            do {
+                let eventsListModels = try events.map {
+                    try $0.toDomain()
+                }
+                completion(.success(eventsListModels))
+            } catch {
+                print("mapping error - " + error.localizedDescription)
+            }
+            case let .failure(error):
+                print("fetching error - " + error.localizedDescription)
+            }
+        }
+        // If error, fetch from service - the network API
         provider.request(.eventsList) { result in
             switch result {
             case let .success(response):
@@ -20,6 +39,7 @@ class DefaultEventsProvider: EventsProviderProtocol {
                     let eventsListModels = try eventsListEntities.map {
                         try $0.toDomain()
                     }
+                    self.repository.saveEvents(events: eventsListEntities)
                     completion(.success(eventsListModels))
                 } catch {
                     completion(.failure(.mapping(error)))
