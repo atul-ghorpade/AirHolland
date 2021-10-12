@@ -1,9 +1,11 @@
 struct GetEventsParams {
     typealias Completion = (Result<[EventModel], UseCaseError>) -> Void
-
+    
+    let shouldRefreshExplicitly: Bool
     let completion: Completion
 
-    init(completion: @escaping Completion) {
+    init(shouldRefreshExplicitly: Bool = false, completion: @escaping Completion) {
+        self.shouldRefreshExplicitly = shouldRefreshExplicitly
         self.completion = completion
     }
 }
@@ -20,7 +22,7 @@ final class DefaultGetEventsUseCase: GetEventsUseCase {
     }
 
     func run(_ params: GetEventsParams) {
-        provider.getEvents { result in
+        provider.getEvents(shouldRefreshExplicitly: params.shouldRefreshExplicitly) { result in
             params.completion(result)
         }
     }

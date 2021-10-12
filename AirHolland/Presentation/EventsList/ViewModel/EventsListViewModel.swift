@@ -8,10 +8,12 @@ struct EventsListViewModelActions {
 
 protocol EventsListViewModelInput {
     func viewLoaded()
+    func listRefreshRequested()
 }
 
 protocol EventsListViewModelOutput {
     var items: Observable<[EventsSectionViewModel]> { get }
+    var error: Observable<String> { get }
     var screenTitle: String { get }
 }
 
@@ -22,6 +24,7 @@ final class DefaultEventsListViewModel: EventsListViewModel {
     private let actions: EventsListViewModelActions
     
     var items: Observable<[EventsSectionViewModel]> = Observable([])
+    var error: Observable<String> = Observable("")
     var screenTitle: String = ""
 
     init(eventsListUseCase: GetEventsUseCase,
@@ -32,13 +35,23 @@ final class DefaultEventsListViewModel: EventsListViewModel {
     
     func viewLoaded() {
         getEventsUseCase.run(GetEventsParams() { [weak self] result in
-            switch result {
-            case let .success(eventModels):
-                self?.items.value = self?.createSectionsViewModels(events: eventModels) ?? []
-            case .failure:
-                break
-            }
+            self?.handleEventsListResponse(result: result)
         })
+    }
+    
+    func listRefreshRequested() {
+        getEventsUseCase.run(GetEventsParams(shouldRefreshExplicitly: true) { [weak self] result in
+            self?.handleEventsListResponse(result: result)
+        })
+    }
+    
+    func handleEventsListResponse(result: Result<[EventModel], UseCaseError>) {
+        switch result {
+        case let .success(eventModels):
+            items.value = createSectionsViewModels(events: eventModels)
+        case .failure:
+            error.value = "Oops! Error while fetching events"
+        }
     }
     
     private func createSectionsViewModels(events: [EventModel]) -> [EventsSectionViewModel] {

@@ -6,7 +6,8 @@ final class EventsListViewController: UIViewController, StoryboardInstantiable, 
     @IBOutlet private weak var tableView: UITableView!
     
     private var viewModel: EventsListViewModel!
-
+    private lazy var refreshControl = UIRefreshControl()
+    
     static func create(with viewModel: EventsListViewModel) -> EventsListViewController {
         let view = EventsListViewController.instantiateViewController()
         view.viewModel = viewModel
@@ -24,12 +25,27 @@ final class EventsListViewController: UIViewController, StoryboardInstantiable, 
         tableView.register(UINib(nibName: EventCell.identifier, bundle: nil), forCellReuseIdentifier: EventCell.identifier)
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableView.automaticDimension
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     private func bind(to viewModel: EventsListViewModel) {
         viewModel.items.observe(on: self) { [weak self] _ in
+            self?.refreshControl.endRefreshing()
             self?.tableView.reloadData()
         }
+        viewModel.error.observe(on: self) { [weak self] error in
+            guard !error.isEmpty else {
+                return
+            }
+            self?.refreshControl.endRefreshing()
+            self?.showAlert(message: error)
+        }
+    }
+    
+    @objc private func refresh(_ sender: AnyObject) {
+        viewModel.listRefreshRequested()
     }
 }
 
