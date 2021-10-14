@@ -76,7 +76,7 @@ Responsible to route from one ViewController to another ViewController
 ## 4. Project Setup
 To run this project on a local machine follow below steps:
 
-* Open AirHolland.xcodeproj file and wait till required swift packages loading is done. In case of build error, please select option Xcode -> File -> Packages -> Update to Latest Package Versions
+* Open AirHolland.xcodeproj file in Xcode 13.x version and wait till required swift packages loading is done. In case of build error, please select option Xcode -> File -> Packages -> Update to Latest Package Versions
 
 ## 4. Pending Things (// TODOs)
 * Add test cases for Data Layer
