@@ -16,6 +16,8 @@
 		B77D3C002715E96F0010F2CA /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77D3BFF2715E96F0010F2CA /* EventDetailsViewModel.swift */; };
 		B77D3C032715E9940010F2CA /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77D3C022715E9940010F2CA /* EventDetailsViewController.swift */; };
 		B77D3C052715E9A80010F2CA /* EventDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77D3C042715E9A80010F2CA /* EventDetailsViewController.storyboard */; };
+		B7822B8D2718043F00660273 /* GetEventsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7822B8C2718043E00660273 /* GetEventsUseCaseMock.swift */; };
+		B7822B8F271804E700660273 /* EventsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7822B8E271804E700660273 /* EventsListViewModelTests.swift */; };
 		B7A5E3C92711A7E600E62A8E /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3C82711A7E600E62A8E /* EventEntity.swift */; };
 		B7A5E3CF2711B5B300E62A8E /* DateHelper in Frameworks */ = {isa = PBXBuildFile; productRef = B7A5E3CE2711B5B300E62A8E /* DateHelper */; };
 		B7A5E3D22711B62C00E62A8E /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B7A5E3D12711B62C00E62A8E /* Moya */; };
@@ -26,6 +28,9 @@
 		B7A5E3DF2711DD1F00E62A8E /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3DE2711DD1F00E62A8E /* AppFlowCoordinator.swift */; };
 		B7A5E3E22711DFAC00E62A8E /* EventsListFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5E3E12711DFAC00E62A8E /* EventsListFlowCoordinator.swift */; };
 		B7A5E3E52711F6A200E62A8E /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7A5E3E42711F6A100E62A8E /* EventCell.xib */; };
+		B7FAA6C12718122A00518F05 /* EventItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FAA6C02718122A00518F05 /* EventItemViewModelTests.swift */; };
+		B7FAA6C5271813D900518F05 /* GetEventsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FAA6C4271813D900518F05 /* GetEventsUseCaseTests.swift */; };
+		B7FAA6C82718141900518F05 /* EventsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FAA6C72718141900518F05 /* EventsProviderMock.swift */; };
 		CA9A43FA270C1BDA005B52AC /* GetEventsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A43F9270C1BDA005B52AC /* GetEventsUseCase.swift */; };
 		CA9A43FD270C1C26005B52AC /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A43FC270C1C26005B52AC /* EventModel.swift */; };
 		CA9A43FF270C1D03005B52AC /* UseCaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A43FE270C1D03005B52AC /* UseCaseError.swift */; };
@@ -47,6 +52,16 @@
 		CAAB5AB1270C183500E2F1CB /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB5AB0270C183500E2F1CB /* Observable.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B7822B84271803CA00660273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAAB5A81270B41AE00E2F1CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAAB5A88270B41AE00E2F1CB;
+			remoteInfo = AirHolland;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		B77D3BD52712DA020010F2CA /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		B77D3BDD2712F5690010F2CA /* EventsSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSectionViewModel.swift; sourceTree = "<group>"; };
@@ -57,6 +72,9 @@
 		B77D3BFF2715E96F0010F2CA /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
 		B77D3C022715E9940010F2CA /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		B77D3C042715E9A80010F2CA /* EventDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventDetailsViewController.storyboard; sourceTree = "<group>"; };
+		B7822B80271803C900660273 /* AirHollandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirHollandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7822B8C2718043E00660273 /* GetEventsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventsUseCaseMock.swift; sourceTree = "<group>"; };
+		B7822B8E271804E700660273 /* EventsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewModelTests.swift; sourceTree = "<group>"; };
 		B7A5E3C82711A7E600E62A8E /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
 		B7A5E3D52711CE0F00E62A8E /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		B7A5E3D72711CE5900E62A8E /* EventsSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSceneDIContainer.swift; sourceTree = "<group>"; };
@@ -65,6 +83,9 @@
 		B7A5E3DE2711DD1F00E62A8E /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		B7A5E3E12711DFAC00E62A8E /* EventsListFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListFlowCoordinator.swift; sourceTree = "<group>"; };
 		B7A5E3E42711F6A100E62A8E /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		B7FAA6C02718122A00518F05 /* EventItemViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItemViewModelTests.swift; sourceTree = "<group>"; };
+		B7FAA6C4271813D900518F05 /* GetEventsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventsUseCaseTests.swift; sourceTree = "<group>"; };
+		B7FAA6C72718141900518F05 /* EventsProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsProviderMock.swift; sourceTree = "<group>"; };
 		CA9A43F9270C1BDA005B52AC /* GetEventsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventsUseCase.swift; sourceTree = "<group>"; };
 		CA9A43FC270C1C26005B52AC /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		CA9A43FE270C1D03005B52AC /* UseCaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseError.swift; sourceTree = "<group>"; };
@@ -89,6 +110,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B7822B7D271803C900660273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAAB5A86270B41AE00E2F1CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +166,41 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B7822B81271803CA00660273 /* AirHollandTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7FAA6C2271813A000518F05 /* DomainTests */,
+				B7822B89271803F000660273 /* PresentationTests */,
+			);
+			path = AirHollandTests;
+			sourceTree = "<group>";
+		};
+		B7822B89271803F000660273 /* PresentationTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7822B8B2718040C00660273 /* DomainMocks */,
+				B7822B8A271803FB00660273 /* EventsList */,
+			);
+			path = PresentationTests;
+			sourceTree = "<group>";
+		};
+		B7822B8A271803FB00660273 /* EventsList */ = {
+			isa = PBXGroup;
+			children = (
+				B7822B8E271804E700660273 /* EventsListViewModelTests.swift */,
+				B7FAA6C02718122A00518F05 /* EventItemViewModelTests.swift */,
+			);
+			path = EventsList;
+			sourceTree = "<group>";
+		};
+		B7822B8B2718040C00660273 /* DomainMocks */ = {
+			isa = PBXGroup;
+			children = (
+				B7822B8C2718043E00660273 /* GetEventsUseCaseMock.swift */,
+			);
+			path = DomainMocks;
+			sourceTree = "<group>";
+		};
 		B7A5E3C72711A7CD00E62A8E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +242,31 @@
 				B7A5E3E12711DFAC00E62A8E /* EventsListFlowCoordinator.swift */,
 			);
 			path = Flows;
+			sourceTree = "<group>";
+		};
+		B7FAA6C2271813A000518F05 /* DomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7FAA6C6271813FE00518F05 /* DataMocks */,
+				B7FAA6C3271813B200518F05 /* UseCases */,
+			);
+			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		B7FAA6C3271813B200518F05 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B7FAA6C4271813D900518F05 /* GetEventsUseCaseTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B7FAA6C6271813FE00518F05 /* DataMocks */ = {
+			isa = PBXGroup;
+			children = (
+				B7FAA6C72718141900518F05 /* EventsProviderMock.swift */,
+			);
+			path = DataMocks;
 			sourceTree = "<group>";
 		};
 		CA9A43FB270C1C15005B52AC /* Models */ = {
@@ -237,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				CAAB5A8B270B41AE00E2F1CB /* AirHolland */,
+				B7822B81271803CA00660273 /* AirHollandTests */,
 				CAAB5A8A270B41AE00E2F1CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -245,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				CAAB5A89270B41AE00E2F1CB /* AirHolland.app */,
+				B7822B80271803C900660273 /* AirHollandTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -348,6 +438,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B7822B7F271803C900660273 /* AirHollandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7822B88271803CA00660273 /* Build configuration list for PBXNativeTarget "AirHollandTests" */;
+			buildPhases = (
+				B7822B7C271803C900660273 /* Sources */,
+				B7822B7D271803C900660273 /* Frameworks */,
+				B7822B7E271803C900660273 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7822B85271803CA00660273 /* PBXTargetDependency */,
+			);
+			name = AirHollandTests;
+			productName = AirHollandTests;
+			productReference = B7822B80271803C900660273 /* AirHollandTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CAAB5A88270B41AE00E2F1CB /* AirHolland */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAAB5A9D270B41B200E2F1CB /* Build configuration list for PBXNativeTarget "AirHolland" */;
@@ -379,6 +487,11 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					B7822B7F271803C900660273 = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
+						TestTargetID = CAAB5A88270B41AE00E2F1CB;
+					};
 					CAAB5A88270B41AE00E2F1CB = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -402,11 +515,19 @@
 			projectRoot = "";
 			targets = (
 				CAAB5A88270B41AE00E2F1CB /* AirHolland */,
+				B7822B7F271803C900660273 /* AirHollandTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B7822B7E271803C900660273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAAB5A87270B41AE00E2F1CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,6 +545,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B7822B7C271803C900660273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7822B8D2718043F00660273 /* GetEventsUseCaseMock.swift in Sources */,
+				B7FAA6C12718122A00518F05 /* EventItemViewModelTests.swift in Sources */,
+				B7822B8F271804E700660273 /* EventsListViewModelTests.swift in Sources */,
+				B7FAA6C82718141900518F05 /* EventsProviderMock.swift in Sources */,
+				B7FAA6C5271813D900518F05 /* GetEventsUseCaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAAB5A85270B41AE00E2F1CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,6 +595,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B7822B85271803CA00660273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAAB5A88270B41AE00E2F1CB /* AirHolland */;
+			targetProxy = B7822B84271803CA00660273 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		CAAB5A92270B41AE00E2F1CB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -482,6 +623,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B7822B86271803CA00660273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R9HMJWLXMR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Private.AirHollandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirHolland.app/AirHolland";
+			};
+			name = Debug;
+		};
+		B7822B87271803CA00660273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R9HMJWLXMR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Private.AirHollandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirHolland.app/AirHolland";
+			};
+			name = Release;
+		};
 		CAAB5A9B270B41B200E2F1CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -655,6 +845,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B7822B88271803CA00660273 /* Build configuration list for PBXNativeTarget "AirHollandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7822B86271803CA00660273 /* Debug */,
+				B7822B87271803CA00660273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CAAB5A84270B41AE00E2F1CB /* Build configuration list for PBXProject "AirHolland" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

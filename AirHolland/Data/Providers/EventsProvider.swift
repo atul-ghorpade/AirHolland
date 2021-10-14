@@ -2,8 +2,8 @@ import Foundation
 
 class DefaultEventsProvider: EventsProviderProtocol {
     private let provider: Provider<EventsService>
-    // TODO: Inject repository from outside - configurator
-    private let repository = DefaultEventsRepositoy()
+    // TODO: Inject repository from outside - from DI
+    private let repository: EventsRepository = DefaultEventsRepositoy()
 
     convenience init() {
         self.init(provider: Provider<EventsService>())

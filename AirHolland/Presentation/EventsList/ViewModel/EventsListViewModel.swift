@@ -22,7 +22,7 @@ protocol EventsListViewModel: EventsListViewModelInput, EventsListViewModelOutpu
 
 final class DefaultEventsListViewModel: EventsListViewModel {
     private let getEventsUseCase: GetEventsUseCase
-    private let actions: EventsListViewModelActions
+    private var actions: EventsListViewModelActions?
     
     var eventGroupedModels = [Int: [EventModel]]()
     var items: Observable<[EventsSectionViewModel]> = Observable([])
@@ -30,7 +30,7 @@ final class DefaultEventsListViewModel: EventsListViewModel {
     var screenTitle: String = "Events"
 
     init(eventsListUseCase: GetEventsUseCase,
-         actions: EventsListViewModelActions) {
+         actions: EventsListViewModelActions? = nil) {
         self.getEventsUseCase = eventsListUseCase
         self.actions = actions
     }
@@ -48,7 +48,8 @@ final class DefaultEventsListViewModel: EventsListViewModel {
     }
     
     func selectedRow(section: Int, row: Int) {
-        guard let selectedEventModel = eventGroupedModels[section]?[row] else {
+        guard let selectedEventModel = eventGroupedModels[section]?[row],
+        let actions = actions else {
             return
         }
         actions.showEventDetails(selectedEventModel)
