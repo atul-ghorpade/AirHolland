@@ -7,11 +7,9 @@ After this, the events are available to view in offline mode and can be refreshe
 
 Below are running app screenshots:
 
-![Screenshot1](./AirHolland/screenshots/EventsList.png)
+![Screenshot1](./AirHolland/screenshots/EventsListPullToRefresh.png)
 
-![Screenshot2](./AirHolland/screenshots/EventsListPullToRefresh.png)
-
-![Screenshot3](./AirHolland/screenshots/EventDetails.png)
+![Screenshot2](./AirHolland/screenshots/EventDetails.png)
 
 ## Table of Contents
 1. [Architecture]
@@ -24,7 +22,7 @@ Below are running app screenshots:
 The project is divided into different folder which act as logical units. Each unit has its own responsibility and behaviour. All components communication is done using abstraction. 
 This app divided into below folder structure:
 This diagram will illustrate high level implementation of architecture
-![Screenshot4](./AirHolland/Diagram/Architecture.png)
+![Screenshot3](./AirHolland/Diagram/Architecture.png)
 
 ### Presentation:
 Responsible to handle all user events on view.
