@@ -58,6 +58,7 @@ It consist below things:
 
 ## 2. Implementation
 To develop this, MVVM-CLEAN architecture is used.
+[Swift Package Manager](https://swift.org/package-manager/) is used as a dependency manager.
 The code is divided into into logical units and each logical units have different-different responsibilities. 
 
 **DIContainer**
