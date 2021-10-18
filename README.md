@@ -7,9 +7,9 @@ After this, the events are available to view in offline mode and can be refreshe
 
 Below are running app screenshots:
 
-![Screenshot1](./AirHolland/screenshots/EventsListPullToRefresh.png =390x844)
+![Screenshot1](./AirHolland/screenshots/EventsListPullToRefresh.png)
 
-![Screenshot2](./AirHolland/screenshots/EventDetails.png =390x844)
+![Screenshot2](./AirHolland/screenshots/EventDetails.png)
 
 ## Table of Contents
 1. [Architecture]
